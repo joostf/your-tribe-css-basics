@@ -29,3 +29,17 @@ img {
   float:left;
   margin-right:1em
 }
+
+a {
+  color: #755304
+}
+
+a img {
+  display:none;
+  float:right;
+  margin-top: 1em;
+}
+
+a:hover img {
+  display:block
+}
