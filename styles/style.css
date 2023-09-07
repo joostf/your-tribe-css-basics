@@ -27,8 +27,6 @@ article {
   padding:1em;
   border-radius:1em;
   box-shadow: 0 0 5px 10px rgba(0,0,0,.1);
-  /background: rgb(34,193,195);
-  /background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
   overflow: hidden;
   position: relative;
   
@@ -43,24 +41,24 @@ article::before {
   z-index:-1;
   scale:3;
   background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-  animation: 1s linear 0s infinite alternate kitten-rotate;
+  animation: 3s linear 0s infinite alternate background-rotate;
 }
 article::after {
   content:'🐱';
   font-size: 2em;
   position: absolute;
-  bottom:0;
-  right:0.5em;
-  rotate: 40deg;
-  scale: 1.5;
-  translate: -0.5em -0.5em;
-  transition: 2s;
+  top:0;
+  right:0.25rem;
+  rotate: 360deg;
+  translate:1.5em;
+  scale: 1;
+  transition: .25s;
   
 } 
 
 article:hover::after {
   rotate:10deg;
-  translate: 2em
+  translate: 0
 }
 
 h1 {
@@ -88,19 +86,7 @@ a:hover img {
   display:block
 }
 
-
-@keyframes kitten-rise {
-  from {
-    /* pushes the sun down past the viewport */
-    transform: translateY(1vh);
-  }
-  to {
-    /* returns the sun to its default position */
-    transform: translateY(0);
-  }
-}
-
-@keyframes kitten-rotate{
+@keyframes background-rotate{
   from {
     /* pushes the sun down past the viewport */
     rotate:360deg
